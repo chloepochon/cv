@@ -15,9 +15,14 @@ ul {
     max-width: 30%;
 }
 /* div#mots-cles ul li, */
- div#en-tete ul li {
+ div#en-tete ul li, nav ul li {
     display: inline-block;
 }
+nav ul li a {
+    text-decoration: none;
+}
+
+
 
 div#en-tete ul li{
     margin-right : 1%;
@@ -87,6 +92,27 @@ div#en-tete ul{
 }
 
 
+/* grid recompose */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    grid-auto-flow: dense;
+}
+
+.grid-item {
+    background-color: #f8f9fa;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.grid-item.large {
+    grid-row: span 2; /* Permet à cet élément d'occuper deux lignes */
+}
+
+
 /* Bouton retour en haut */
 
 .back-to-top {
@@ -110,4 +136,11 @@ div#en-tete ul{
 }
 .back-to-top:hover {
     background-color: #8b8b8b;
+}
+
+
+/* progress bar */
+
+div.progress-bar{
+    background-color: #3d3d3d;
 }
